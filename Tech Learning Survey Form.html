@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Learning Survey</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fc;
+      color: #333;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #title {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    #description {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #666;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      margin-top: 10px;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      display: block;
+      font-weight: normal;
+      margin: 5px 0;
+    }
+
+    .radio-group input,
+    .checkbox-group input {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    #submit {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #submit:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 id="title">Tech Learning Survey</h1>
+
+    <p id="description">
+      Help us understand your learning preferences by completing this short survey.
+    </p>
+
+    <form id="survey-form">
+
+      <label id="name-label" for="name">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your full name"
+        required
+      >
+
+      <label id="email-label" for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      >
+
+      <label id="number-label" for="number">Age</label>
+      <input
+        type="number"
+        id="number"
+        min="10"
+        max="100"
+        placeholder="Enter your age"
+      >
+
+      <label for="dropdown">Favorite Learning Platform</label>
+      <select id="dropdown">
+        <option value="">Select one</option>
+        <option value="freecodecamp">freeCodeCamp</option>
+        <option value="coursera">Coursera</option>
+        <option value="udemy">Udemy</option>
+      </select>
+
+      <label>Experience Level</label>
+
+      <div class="radio-group">
+        <label>
+          <input
+            type="radio"
+            name="experience"
+            value="beginner"
+          >
+          Beginner
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="experience"
+            value="intermediate"
+          >
+          Intermediate
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="experience"
+            value="advanced"
+          >
+          Advanced
+        </label>
+      </div>
+
+      <label>Technologies You Use</label>
+
+      <div class="checkbox-group">
+        <label>
+          <input
+            type="checkbox"
+            value="html"
+          >
+          HTML
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            value="css"
+          >
+          CSS
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            value="javascript"
+          >
+          JavaScript
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            value="sql"
+          >
+          SQL
+        </label>
+      </div>
+
+      <label for="comments">Additional Comments</label>
+      <textarea
+        id="comments"
+        placeholder="Share your thoughts here..."
+      ></textarea>
+
+      <button id="submit" type="submit">
+        Submit Survey
+      </button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
